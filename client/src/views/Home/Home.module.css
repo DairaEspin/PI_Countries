@@ -1,0 +1,7 @@
+.background {
+    background-image: url('../../assets/home2.jpeg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta real de tu imagen */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  

@@ -1,0 +1,40 @@
+.countries {
+    display: grid;
+    grid-template-columns: repeat(5, 19em);
+    grid-row-gap: 4em;
+    justify-items: center;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  
+  .alert {
+    position: absolute;
+    background-color: white;
+    color: #f44336;
+    padding: auto;
+    left: 16em;
+    font-family: mifont;
+    font-size: 2em;
+  }
+  
+  .btnalert {
+    position: absolute;
+    left: 33em;
+    top: 0.8em;
+    font-family: miFuente;
+    color: #010305 !important;
+    font-size: 0.5em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    padding: auto;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .btnalert:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }

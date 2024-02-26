@@ -1,0 +1,277 @@
+.contenedor {
+    display: flex;
+    text-align: center;
+    margin-left: 15em;
+    margin-right: 15em;
+    padding-bottom: 4em;
+    padding-top: 5em;
+  }
+  
+  .formulario {
+    background-image: url("../../assets/create.jpg");
+    font-family: miFuente;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 35em;
+    width: 55em;
+    margin-top: 1em;
+    margin-left: 4em;
+  }
+  
+  .act {
+    display: flex;
+    margin-left: 4em;
+    margin-top: 6em;
+  }
+  
+  .actinput {
+    margin-left: 1em;
+    border-radius: 0.5em;
+    width: 13em;
+  }
+  
+  .dif {
+    display: flex;
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
+  
+  .difinput {
+    margin-left: 1em;
+    border-radius: 0.5em;
+    width: 6em;
+  }
+  
+  .dur {
+    display: flex;
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
+  
+  .durinput {
+    margin-left: 1em;
+    border-radius: 0.5em;
+    width: 6em;
+  }
+  
+  .temp {
+    display: flex;
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
+  
+  .tempsel {
+    margin-left: 1em;
+    border-radius: 0.5em;
+    width: 7em;
+  }
+  
+  .pais {
+    position: absolute;
+    top: 11.5em;
+    right: 35em;
+  }
+  
+  .paissel {
+    position: absolute;
+    font-family: miFuente;
+    bottom: 29em;
+    right: 30em;
+    border-radius: 0.5em;
+    width: 23em;
+    height: 8em;
+  }
+  
+  .selec {
+    position: absolute;
+    bottom: 21em;
+    right: 30em;
+  }
+  
+  .lista {
+    position: relative;
+    bottom: 2em;
+    left: 11.5em;
+    list-style: none;
+  }
+  
+  .close {
+    font-family: miFuente;
+    color: #010305 !important;
+    font-size: 1em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .close:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }
+  
+  .descrip {
+    position: absolute;
+    bottom: 16em;
+    left: 29em;
+  }
+  
+  .descinput {
+    position: absolute;
+    bottom: 8em;
+    left: 27em;
+    border-radius: 0.5em;
+    width: 25em;
+    height: 9em;
+  }
+  
+  .linkact {
+    font-family: miFont;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    position: absolute;
+    bottom: 3em;
+    left: 2em;
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .linkact:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .linkact:hover {
+    background-position: 0;
+  }
+  
+  .linkact:hover::before {
+    width: 100%;
+  }
+  
+  .linkhome {
+    font-family: miFont;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    position: absolute;
+    bottom: 3em;
+    right: 8em;
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .linkhome:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .linkhome:hover {
+    background-position: 0;
+  }
+  
+  .linkhome:hover::before {
+    width: 100%;
+  }
+  
+  .boton {
+    position: absolute;
+    right: 30em;
+    bottom: 6em;
+    font-family: miFuente;
+    color: #010305 !important;
+    font-size: 1em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    padding: 4px 9px;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .boton:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }
+  
+  .titulo {
+    position: absolute;
+    right: 11.8em;
+    top: 0.3em;
+    font-size: 3em;
+    font-family: mifont;
+  }
+  
+  .successMessage {
+    position: absolute;
+    background-color: white;
+    color: #4caf50;
+    padding: auto;
+    top: 7em;
+    right: 32em;
+    font-family: mifont;
+    font-size: 1.2em;
+  }
+  
+  .btnalert {
+    position: absolute;
+    top: 2.5em;
+    right: 9.5em;
+    font-family: miFuente;
+    color: #010305 !important;
+    font-size: 0.7em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    padding: auto;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .btnalert:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }
+  
+  .error {
+    font-size: 0.7em;
+    color: rgb(118, 11, 11);
+    position: absolute;
+    margin-top: 2.3em;
+    margin-left: 8.5em;
+  }
+  
+  .errordesc {
+    font-size: 0.7em;
+    color: rgb(118, 11, 11);
+    position: absolute;
+    margin-top: 18em;
+    left: 35em;
+  }

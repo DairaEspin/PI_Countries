@@ -1,0 +1,113 @@
+@font-face {
+    font-family: miFuente;
+    src: url("../../LibreBaskerville-Regular.ttf") format("truetype");
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: em;
+    grid-row-gap: 2em;
+    padding-left: 4em;
+    padding-top: 2em;
+  }
+  
+  .actividad {
+    background-image: url("../../assets/home.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flexbox;
+    align-items: center;
+    height: 40em;
+    width: 40em;
+    opacity: 75%;
+  }
+  
+  .tipo {
+    font-family: mifuente;
+    font-size: 1.6em;
+    position: relative;
+    left: 1em;
+    font-weight: bold;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .linkhome {
+    font-size: 0.8em;
+    position: absolute;
+    font-family: miFont;
+    top: 1em;
+    right: 53em;
+  }
+  
+  .linkform {
+    font-size: 1.5em;
+    position: relative;
+    left: 40em;
+    font-family: miFont;
+  }
+  .link {
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link:hover {
+    background-position: 0;
+  }
+  
+  .link:hover::before {
+    width: 100%;
+  }
+  
+  .alert {
+    position: absolute;
+    background-color: white;
+    color: #f44336;
+    padding: auto;
+    left: 5em;
+    font-family: mifont;
+    font-size: 1.5em;
+  }
+  
+  .btnalert {
+    position: absolute;
+    top: 15em;
+    left: 30em;
+    font-family: miFuente;
+    color: #010305 !important;
+    font-size: 1em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    padding: auto;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .btnalert:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }

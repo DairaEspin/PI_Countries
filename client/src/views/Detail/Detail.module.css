@@ -1,0 +1,130 @@
+.contenedor {
+    background-image: url("../../assets/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em;
+    position: absolute;
+    margin-top: 2em;
+    margin-left: 18em;
+    height: 40em;
+    width: 57em;
+    border: solid rgb(8, 8, 43) 0.2em;
+  }
+  
+  .imag {
+    border-radius: 2em;
+    position: absolute;
+    left: 5em;
+    top: 6em;
+  }
+  
+  .name {
+    position: absolute;
+    left: 4em;
+    top: 13em;
+    font-family: miFuente;
+  }
+  .capital {
+    position: absolute;
+    left: 4em;
+    top: 15em;
+    font-family: miFuente;
+  }
+  
+  .poblacion {
+    position: absolute;
+    left: 4em;
+    bottom: 6.5em;
+    font-family: miFuente;
+  }
+  .continente {
+    position: absolute;
+    left: 4em;
+    bottom: 4em;
+    font-family: miFuente;
+  }
+  
+  .preg {
+    position: absolute;
+    right: 1em;
+    bottom: 22em;
+    font-size: 2em;
+    font-family: miFuente;
+    white-space: nowrap;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: black;
+    font-size: 0.7em;
+    position: absolute;
+    top: 9em;
+    right: 3.5em;
+    font-family: miFuente;
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link:hover {
+    background-position: 0;
+  }
+  
+  .link:hover::before {
+    width: 100%;
+  }
+  
+  .act {
+    position: absolute;
+    top: 11em;
+    left: 32em;
+  }
+  
+  .home {
+    font-family: miFont;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 2em;
+    right: 8em;
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .home:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .home:hover {
+    background-position: 0;
+  }
+  
+  .home:hover::before {
+    width: 100%;
+  }

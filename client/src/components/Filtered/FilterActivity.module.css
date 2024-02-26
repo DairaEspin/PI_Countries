@@ -1,0 +1,34 @@
+@font-face {
+    font-family: miFont;
+    src: url("../../CroissantOne-Regular.ttf") format("truetype");
+  }
+  
+  .contenedor {
+    position: relative;
+    right: 46em;
+    top: 1em;
+  }
+  
+  .input {
+    border-radius: 0.3em;
+    padding: 5px 10px;
+    margin-top: 20px;
+  }
+  
+  .boton {
+    font-family: miFont;
+    color: #010305 !important;
+    font-size: 1em;
+    text-shadow: 1px 1px 0px #31b097;
+    box-shadow: 1px 1px 1px #bee2f9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid #538ad3;
+    background: #63b8ee;
+    background: linear-gradient(to top, #63b8ee, #468ccf);
+  }
+  .boton:hover {
+    color: #14396a !important;
+    background: #468ccf;
+    background: linear-gradient(to top, #468ccf, #63b8ee);
+  }
