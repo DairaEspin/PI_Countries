@@ -7,7 +7,7 @@ import style from "./Detail.module.css";
 export default function Detail() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const countryDetail = useSelector((state) => state.detail);
+  const countryDetail = useSelector((state) => state.id);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,15 +18,13 @@ export default function Detail() {
     }
   }, [countryDetail, dispatch, id]);
 
-  const filteredActivities = countryDetail ? countryDetail.Activities : [];
+   useEffect(() => {
+    const countryId = countryDetail.CountryId;
+     dispatch(getActivity(countryId));
+    dispatch(getId(id));
+   }, [countryDetail.CountryId, dispatch, id]);
 
-  // useEffect(() => {
-  //   const countryId = countryDetail.CountryId;
-  //   dispatch(getActivity(countryId));
-  //   dispatch(getId(id));
-  // }, [countryDetail.CountryId, dispatch, id]);
-
-  // const filteredActivities = countryDetail.Activities;
+ const filteredActivities = countryDetail.Activities;
 
   const handleNavigateToHome = () => {
     navigate("/home");
@@ -41,14 +39,13 @@ export default function Detail() {
             src={countryDetail.image}
             alt="Bandera del país"
           />
-          <h2 className={style.name}>{countryDetail.name}</h2>
+         <h2 className={style.id}>ID: {countryDetail.id}</h2>
+          <h2 className={style.name}>Name: {countryDetail.name}</h2>
           <h2 className={style.capital}>Capital: {countryDetail.capital}</h2>
-          <h2 className={style.population}>
-            Población: {countryDetail.population}
-          </h2>
-          <h2 className={style.continent}>
-            Continente: {countryDetail.continent}{" "}
-          </h2>
+          <h2 className={style.subregion}>Subregion: {countryDetail.subregion}</h2>
+          <h2 className={style.area}>Area: {countryDetail.area}</h2>
+          <h2 className={style.population}>Population: {countryDetail.population}</h2>
+          <h2 className={style.continent}>Continent: {countryDetail.continent}{" "}</h2>
         
           <div className={style.act}>
             {filteredActivities.map((activity, index) => (
@@ -57,7 +54,7 @@ export default function Detail() {
                 <ul>
                   <li>Name: {activity.name}</li>
                   <li>Difficulty: {activity.difficulty}</li>
-                  <li>Hours (Time): {activity.duracionHoras}</li>
+                  <li>Hours (Time): {activity.duration}</li>
                   <li>Season: {activity.season}</li>
                 </ul>
               </>
@@ -69,7 +66,7 @@ export default function Detail() {
               to="/home"
               onClick={handleNavigateToHome}
             >
-              Volver
+              Back Home
             </Link>
           </h5>
         </div>

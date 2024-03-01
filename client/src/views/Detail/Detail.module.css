@@ -1,31 +1,31 @@
 .contenedor {
-    background-image: url("../../assets/about.jpg");
+    background-image: url("../../assets/sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 2em;
+    border-radius: 5em;
     position: absolute;
-    margin-top: 2em;
-    margin-left: 18em;
-    height: 40em;
-    width: 57em;
+    margin-top: 3em;
+    margin-left: 10em;
+    height: 30em;
+    width: 47em;
     border: solid rgb(8, 8, 43) 0.2em;
   }
   
   .imag {
     border-radius: 2em;
     position: absolute;
-    left: 5em;
+    left: 8em;
     top: 6em;
   }
   
   .name {
     position: absolute;
-    left: 4em;
+    left: 8em;
     top: 13em;
   }
   .capital {
     position: absolute;
-    left: 4em;
+    left: 8em;
     top: 15em;
   }
   
@@ -58,7 +58,6 @@
     background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
   }
   
@@ -95,16 +94,15 @@
     position: absolute;
     bottom: 2em;
     right: 8em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #ffffff 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    border-radius: 22px;
   }
   
   .home:before {
     content: "";
-    background: #54b3d6;
     display: block;
     position: absolute;
     bottom: -3px;

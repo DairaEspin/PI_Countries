@@ -106,7 +106,7 @@ export default function ActivityForm() {
             className={style.actinput}
             type="text"
             name="nombre"
-            placeholder="Nombre de la actividad"
+            placeholder="Name of Activity"
             value={formData.nombre}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -121,7 +121,7 @@ export default function ActivityForm() {
           <input
             className={style.difinput}
             type="text"
-            name="dificultad"
+            name="difficulty"
             placeholder="Del 1 al 5"
             value={formData.dificultad}
             onChange={handleInputChange}
@@ -137,7 +137,7 @@ export default function ActivityForm() {
             className={style.durinput}
             type="text"
             name="duracionHoras"
-            placeholder="Horas"
+            placeholder="Hours"
             value={formData.duracionHoras}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -166,7 +166,7 @@ export default function ActivityForm() {
           )}
         </div>
         <div>
-          <label className={style.pais}>Países</label>
+          <label className={style.pais}>Countries</label>
           <select
             className={style.paissel}
             name="pais"

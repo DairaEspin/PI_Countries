@@ -55,13 +55,13 @@ export default function Activity() {
         <p>{error}</p>
       ) : (
         activities.map((activity, index) => (
-          <div key={index} className={style.actividad}>
-            <p className={style.tipo}>Type of Activity: {activity.nombre}</p>
-            <p className={style.tipo}>Difficulty: {activity.dificultad}</p>
+          <div key={index} className={style.activity}>
+            <p className={style.tipo}>Type of Activity: {activity.name}</p>
+            <p className={style.tipo}>Difficulty: {activity.difficulty}</p>
             <p className={style.tipo}>
-              Hours (Time): {activity.duracionHoras}
+              Hours (Time): {activity.duration}
             </p>
-            <p className={style.tipo}>Season: {activity.temporada}</p>
+            <p className={style.tipo}>Season: {activity.season}</p>
             <p className={style.tipo}>Country: {activity.pais.join(", ")}</p>
           </div>
         ))
