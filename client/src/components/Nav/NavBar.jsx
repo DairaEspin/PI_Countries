@@ -20,6 +20,9 @@ const Nav = ({ onSearch, searchTerm, setSearchTerm }) => {
       <Link className={style.link} to="/activities">
         Search Activities
       </Link>
+      <Link className={style.link2} to="/create">
+        Create Activity
+      </Link>
     </nav>
   );
 };

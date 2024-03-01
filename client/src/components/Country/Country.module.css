@@ -1,9 +1,4 @@
-@font-face {
-    font-family: miFuente;
-    src: url("../../LibreBaskerville-Regular.ttf") format("truetype");
-  }
-  
-  .contenedor {
+.contenedor {
     background-image: url("../../assets/sky.jpg");
     background-repeat: no-repeat;
     display: flex;
@@ -24,17 +19,16 @@
     width: 9.5em;
     border-radius: 70%;
     position: relative;
-    top: 2.3em;
-    left: 0.5em;
+    top: 0.3em;
+    left: -0.5em;
   }
   .name {
     color: rgba(255, 248, 248, 0.881);
     position: relative;
     bottom: 0.8em;
-    font-family: miFuente;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   
   .link {
@@ -45,5 +39,4 @@
     color: rgba(255, 248, 248, 0.881);
     position: relative;
     top: 0.8em;
-    font-family: miFuente;
   }

@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function FilterContinent() {
   const dispatch = useDispatch();
   const continentFilter = useSelector(
-    (state) => state.continentFilter.continente
+    (state) => state.continentFilter.continent
   );
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -38,7 +38,7 @@ export default function FilterContinent() {
         <option value="Antarctica">Antarctica</option>
       </select>
       <button className={style.boton} onClick={handleResetFilter}>
-        Limpiar
+        Clean
       </button>
     </div>
   );

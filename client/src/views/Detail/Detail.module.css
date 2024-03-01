@@ -22,26 +22,22 @@
     position: absolute;
     left: 4em;
     top: 13em;
-    font-family: miFuente;
   }
   .capital {
     position: absolute;
     left: 4em;
     top: 15em;
-    font-family: miFuente;
   }
   
   .poblacion {
     position: absolute;
     left: 4em;
     bottom: 6.5em;
-    font-family: miFuente;
   }
   .continente {
     position: absolute;
     left: 4em;
     bottom: 4em;
-    font-family: miFuente;
   }
   
   .preg {
@@ -49,7 +45,6 @@
     right: 1em;
     bottom: 22em;
     font-size: 2em;
-    font-family: miFuente;
     white-space: nowrap;
   }
   
@@ -60,7 +55,6 @@
     position: absolute;
     top: 9em;
     right: 3.5em;
-    font-family: miFuente;
     background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
     background-size: 200% 100%;
     background-position: -100%;
@@ -95,7 +89,6 @@
   }
   
   .home {
-    font-family: miFont;
     text-decoration: none;
     color: black;
     font-size: 1.3em;

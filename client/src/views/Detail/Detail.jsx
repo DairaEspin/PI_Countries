@@ -11,12 +11,22 @@ export default function Detail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const countryId = countryDetail.CountryId;
-    dispatch(getActivity(countryId));
-    dispatch(getId(id));
-  }, [countryDetail.CountryId, dispatch, id]);
+    if (countryDetail && countryDetail.CountryId) {
+      const countryId = countryDetail.CountryId;
+      dispatch(getActivity(countryId));
+      dispatch(getId(id));
+    }
+  }, [countryDetail, dispatch, id]);
 
-  const filteredActivities = countryDetail.Activities;
+  const filteredActivities = countryDetail ? countryDetail.Activities : [];
+
+  // useEffect(() => {
+  //   const countryId = countryDetail.CountryId;
+  //   dispatch(getActivity(countryId));
+  //   dispatch(getId(id));
+  // }, [countryDetail.CountryId, dispatch, id]);
+
+  // const filteredActivities = countryDetail.Activities;
 
   const handleNavigateToHome = () => {
     navigate("/home");
@@ -27,37 +37,28 @@ export default function Detail() {
       {countryDetail.name ? (
         <div>
           <img
-            className={style.imag}
-            src={countryDetail.imagen}
+            className={style.image}
+            src={countryDetail.image}
             alt="Bandera del país"
           />
           <h2 className={style.name}>{countryDetail.name}</h2>
           <h2 className={style.capital}>Capital: {countryDetail.capital}</h2>
-          <h2 className={style.poblacion}>
-            Población: {countryDetail.población}
+          <h2 className={style.population}>
+            Población: {countryDetail.population}
           </h2>
-          <h2 className={style.continente}>
-            Continente: {countryDetail.continente}{" "}
+          <h2 className={style.continent}>
+            Continente: {countryDetail.continent}{" "}
           </h2>
-          <h2 className={style.preg}>
-            <a
-              className={style.link}
-              href={countryDetail.mapa}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Miralo en el mapa
-            </a>
-          </h2>
+        
           <div className={style.act}>
             {filteredActivities.map((activity, index) => (
               <>
-                <h3 key={index}>Actividades</h3>
+                <h3 key={index}>Activities</h3>
                 <ul>
-                  <li>Name: {activity.nombre}</li>
-                  <li>Difficulty: {activity.dificultad}</li>
+                  <li>Name: {activity.name}</li>
+                  <li>Difficulty: {activity.difficulty}</li>
                   <li>Hours (Time): {activity.duracionHoras}</li>
-                  <li>Season: {activity.temporada}</li>
+                  <li>Season: {activity.season}</li>
                 </ul>
               </>
             ))}

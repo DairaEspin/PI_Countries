@@ -1,9 +1,4 @@
-@font-face {
-    font-family: miFont;
-    src: url("../../CroissantOne-Regular.ttf") format("truetype");
-  }
-  
-  .contenedor {
+.contenedor {
     display: inline-block;
     padding-bottom: 2.5em;
     padding-top: 2.5em;
@@ -12,7 +7,6 @@
   }
   
   .label {
-    font-family: miFont;
     font-weight: bold;
   }
   
@@ -23,7 +17,6 @@
   }
   
   .boton {
-    font-family: miFont;
     color: #010305 !important;
     font-size: 0.8em;
     text-shadow: 1px 1px 0px #31b097;
@@ -33,6 +26,7 @@
     border: 2px solid #538ad3;
     background: #63b8ee;
     background: linear-gradient(to top, #63b8ee, #468ccf);
+    font-family: 'Josefin Sans', sans-serif;
   }
   .boton:hover {
     color: #14396a !important;
@@ -41,24 +35,23 @@
   }
   
   .link {
-    right: 20em;
+    right: -2em;
     bottom: 7em;
-    font-family: miFont;
     font-weight: bold;
     font-size: 1.5em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #ffffff 50%);
     background-size: 200% 100%;
-    background-position: -100%;
+    background-position: -150%;
     display: inline-block;
     padding: 5px 0;
     position: relative;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    border-radius: 55px;
+    font-family: 'Josefin Sans', sans-serif;
   }
   
   .link:before {
     content: "";
-    background: #54b3d6;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -75,26 +68,27 @@
   .link:hover::before {
     width: 100%;
   }
-  
-  .linkAbout {
-    left: 7em;
+
+
+  .link2 {
+    right: -20em;
     bottom: 7em;
-    font-family: miFont;
     font-weight: bold;
     font-size: 1.5em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #ffffff 50%);
     background-size: 200% 100%;
-    background-position: -100%;
+    background-position: -150%;
     display: inline-block;
     padding: 5px 0;
     position: relative;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    border-radius: 55px;
+    font-family: 'Josefin Sans', sans-serif;
   }
-  
-  .linkAbout:before {
+
+    
+  .link2:before {
     content: "";
-    background: #54b3d6;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -104,10 +98,11 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .linkAbout:hover {
+  .link2:hover {
     background-position: 0;
   }
   
-  .linkAbout:hover::before {
+  .link2:hover::before {
     width: 100%;
   }
+  

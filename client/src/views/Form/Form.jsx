@@ -101,7 +101,7 @@ export default function ActivityForm() {
     <div className={style.contenedor}>
       <form onSubmit={handleSubmit} className={style.formulario}>
         <div className={style.act}>
-          <label>Actividad:</label>
+          <label>Activity:</label>
           <input
             className={style.actinput}
             type="text"
@@ -117,7 +117,7 @@ export default function ActivityForm() {
         </div>
 
         <div className={style.dif}>
-          <label>Dificultad:</label>
+          <label>Difficulty:</label>
           <input
             className={style.difinput}
             type="text"
@@ -132,7 +132,7 @@ export default function ActivityForm() {
           )}
         </div>
         <div className={style.dur}>
-          <label>Duración:</label>
+          <label>Duration:</label>
           <input
             className={style.durinput}
             type="text"
@@ -147,7 +147,7 @@ export default function ActivityForm() {
           )}
         </div>
         <div className={style.temp}>
-          <label>Temporada:</label>
+          <label>Season:</label>
           <select
             className={style.tempsel}
             type="text"
@@ -156,10 +156,10 @@ export default function ActivityForm() {
             onChange={handleInputChange}
             onBlur={handleBlur}
           >
-            <option value="Verano">Verano</option>
-            <option value="Otoño">Otoño</option>
-            <option value="Invierno">Invierno</option>
-            <option value="Primavera">Primavera</option>
+            <option value="Verano">Summer</option>
+            <option value="Otoño">Autumn</option>
+            <option value="Invierno">Winter</option>
+            <option value="Primavera">Spring</option>
           </select>
           {errors.temporada && (
             <span className={style.error}> {errors.temporada} </span>
@@ -188,7 +188,7 @@ export default function ActivityForm() {
           {errors.pais && <span className={style.error}> {errors.pais} </span>}
         </div>
         <div>
-          <label className={style.selec}>Países seleccionados:</label>
+          <label className={style.selec}>Select Countries:</label>
           <ul className={style.lista}>
             {formData.pais.map((selectedCountryName) => {
               const selectedCountry = allCountry.find(
@@ -210,27 +210,27 @@ export default function ActivityForm() {
         </div>
     
         <button className={style.boton} type="submit">
-          Crear Actividad
+          CREATE ACTIVITY
         </button>
         {showSuccessMessage && (
           <div className={style.successMessage}>
-            Actividad creada exitosamente
+            CREATED SUCCESSFULLY
             <button className={style.btnalert} onClick={handleCerrar}>
-              Cerrar
+              Close
             </button>
           </div>
         )}
       </form>
       <div>
         <Link className={style.linkact} to="/activities">
-          <h3>Volver a actividades</h3>
+          <h3>Back Activity</h3>
         </Link>
         <Link className={style.linkhome} to="/home">
-          <h3>Volver a home</h3>
+          <h3>Back Home</h3>
         </Link>
       </div>
       <div>
-        <label className={style.titulo}>Bitácora de viaje</label>
+        <label className={style.titulo}>CREATE YOUR ACTIVITY</label>
       </div>
     </div>
   );

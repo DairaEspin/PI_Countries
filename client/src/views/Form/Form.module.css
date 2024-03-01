@@ -1,15 +1,13 @@
 .contenedor {
     display: flex;
-    text-align: center;
-    margin-left: 15em;
-    margin-right: 15em;
-    padding-bottom: 4em;
-    padding-top: 5em;
+    background-image: url("../../assets/create.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
   }
   
   .formulario {
-    background-image: url("../../assets/create.jpg");
-    font-family: miFuente;
     font-weight: bold;
     background-repeat: no-repeat;
     background-size: contain;
@@ -76,7 +74,6 @@
   
   .paissel {
     position: absolute;
-    font-family: miFuente;
     bottom: 29em;
     right: 30em;
     border-radius: 0.5em;
@@ -98,7 +95,6 @@
   }
   
   .close {
-    font-family: miFuente;
     color: #010305 !important;
     font-size: 1em;
     text-shadow: 1px 1px 0px #31b097;
@@ -130,23 +126,21 @@
   }
   
   .linkact {
-    font-family: miFont;
     text-decoration: none;
     color: black;
     font-size: 1em;
     position: absolute;
     bottom: 3em;
     left: 2em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #54b3d6, #ffffff 50%, #46b9e3 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    border-radius: 22px;
   }
   
   .linkact:before {
     content: "";
-    background: #54b3d6;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -165,23 +159,21 @@
   }
   
   .linkhome {
-    font-family: miFont;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 1em;
     position: absolute;
     bottom: 3em;
     right: 8em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #54b3d6, #ffffff 50%, #4399d7 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    border-radius: 22px;
   }
   
   .linkhome:before {
     content: "";
-    background: #54b3d6;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -203,7 +195,6 @@
     position: absolute;
     right: 30em;
     bottom: 6em;
-    font-family: miFuente;
     color: #010305 !important;
     font-size: 1em;
     text-shadow: 1px 1px 0px #31b097;
@@ -222,10 +213,9 @@
   
   .titulo {
     position: absolute;
-    right: 11.8em;
+    right: 5.8em;
     top: 0.3em;
     font-size: 3em;
-    font-family: mifont;
   }
   
   .successMessage {
@@ -235,7 +225,6 @@
     padding: auto;
     top: 7em;
     right: 32em;
-    font-family: mifont;
     font-size: 1.2em;
   }
   
@@ -243,7 +232,6 @@
     position: absolute;
     top: 2.5em;
     right: 9.5em;
-    font-family: miFuente;
     color: #010305 !important;
     font-size: 0.7em;
     text-shadow: 1px 1px 0px #31b097;

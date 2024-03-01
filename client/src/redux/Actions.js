@@ -24,10 +24,10 @@ import {
     };
   };
   
-  export const filterContinent = (continente) => {
+  export const filterContinent = (continent) => {
     return {
       type: FILTER_CONTINENT,
-      payload: continente,
+      payload: continent,
     };
   };
   
@@ -40,7 +40,7 @@ import {
         .then((response) =>
         dispatch({
           type: CREATE_ACTIVITY,
-          payload: data, // Agrega "success" a la respuesta
+          payload: data,
         }))
       } catch (error) {
         console.error("Error al crear la actividad: ", error);
@@ -51,7 +51,7 @@ import {
         
   
   export const getActivity = (activityFilter) => {
-    const endpoint = `http://localhost:3001/activity?activityFilter=${activityFilter}`;
+    const endpoint = `http://localhost:3001/activities${activityFilter}`;
   
     return async (dispatch) => {
       try {

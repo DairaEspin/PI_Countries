@@ -112,8 +112,8 @@ export default function Countries({ searchTerm, setSearchTerm }) {
               key={index}
               id={coun.id}
               name={coun.name}
-              continente={coun.continente}
-              imagen={coun.imagen}
+              continent={coun.continent}
+              image={coun.image}
             />
           ))
         )}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Landing.module.css";
-import landingTitulo from "../../assets/Landing.jpg";
+import landingTitulo from "../../assets/home2.jpeg";
 
 function Landing() {
   return (

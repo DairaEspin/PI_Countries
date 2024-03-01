@@ -14,7 +14,6 @@
     color: #f44336;
     padding: auto;
     left: 16em;
-    font-family: mifont;
     font-size: 2em;
   }
   
@@ -22,7 +21,6 @@
     position: absolute;
     left: 33em;
     top: 0.8em;
-    font-family: miFuente;
     color: #010305 !important;
     font-size: 0.5em;
     text-shadow: 1px 1px 0px #31b097;
