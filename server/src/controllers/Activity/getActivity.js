@@ -7,7 +7,7 @@ const getActivity = async (req, res)=>{
                 model: Country,
                 attributes: ["id"],
                 through: {
-                    attributes: []
+                attributes: []
                 }
             }
         })

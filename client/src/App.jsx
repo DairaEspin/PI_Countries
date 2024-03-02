@@ -1,17 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux'; // Importa el Provider
-import store from './redux/Store'; // Importa tu store de Redux
+import { Provider } from 'react-redux';
+import store from './redux/Store'; 
 
 import Landing from './views/Landing/Landing';
 import Home from './views/Home/Home';
 import Form from './views/Form/Form';
 import Detail from './views/Detail/Detail';
+import Activities from './components/Activity/Activity'
 
 
 function App() {
   return (
-    <Provider store={store}> {/* Envuelve tu aplicación con Provider */}
+    <Provider store={store}>
       <div className="App">
         <Router>
           <Routes>
@@ -19,6 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/create" element={<Form />} />
+            <Route path="/activities" element={<Activities />} />
           </Routes>
         </Router>
       </div>

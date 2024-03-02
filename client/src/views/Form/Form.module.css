@@ -137,6 +137,8 @@
     background-position: -100%;
     transition: all 0.3s ease-in-out;
     border-radius: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid #003060;
   }
   
   .linkact:before {
@@ -170,6 +172,8 @@
     background-position: -100%;
     transition: all 0.3s ease-in-out;
     border-radius: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid #003060;
   }
   
   .linkhome:before {
@@ -216,6 +220,10 @@
     right: 5.8em;
     top: 0.3em;
     font-size: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: #468ccf;
+    border-radius: 22px;
   }
   
   .successMessage {

@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { getActivity } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import FilterActivity from "../Filtered/Filter";
+import FilterActivity from "../Filtered/FilterActivity";
 import style from "./Activity.module.css";
 
 export default function Activity() {
   const dispatch = useDispatch();
-  const activities = useSelector((state) => state.activities);
-  console.log("estado", activities);
+  const activity = useSelector((state) => state.activity);
+  console.log("estado", activity);
   const [activityFilter, setActivityFilter] = useState(""); // Estado local para almacenar el filtro
   const [error, setError] = useState(null);
   const [noResults, setNoResults] = useState(false);
@@ -34,7 +34,7 @@ export default function Activity() {
   return (
     <div className={style.contenedor}>
       <div className={style.linkform}>
-        <Link className={style.link} to="/create_activity">
+        <Link className={style.link} to="/create">
           <h3>CREATE NEW ACTIVITY</h3>
         </Link>
       </div>
@@ -53,8 +53,7 @@ export default function Activity() {
         </div>
       ) : error ? (
         <p>{error}</p>
-      ) : (
-        activities.map((activity, index) => (
+      ) : (activity.map((activity, index) => (
           <div key={index} className={style.activity}>
             <p className={style.tipo}>Type of Activity: {activity.name}</p>
             <p className={style.tipo}>Difficulty: {activity.difficulty}</p>

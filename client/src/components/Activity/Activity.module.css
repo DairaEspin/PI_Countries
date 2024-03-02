@@ -35,6 +35,7 @@
     position: absolute;
     top: 1em;
     right: 53em;
+    font-family: 'Josefin Sans', sans-serif;
   }
   
   .linkform {
@@ -43,19 +44,20 @@
     left: 40em;
   }
   .link {
-    background-image: linear-gradient(to right, #9250b0, #d454d6 50%, #000 50%);
+    background-image: linear-gradient(to right, #9250b0, #ffffff 50%, #379bd1 50%);
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
     padding: 5px 0;
     position: relative;
-    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
-  }
+    border-radius: 22px;
+    margin-left: -13em;
+    font-family: 'Josefin Sans', sans-serif;
+   }
   
   .link:before {
     content: "";
-    background: #47319f;
     display: block;
     position: absolute;
     bottom: -3px;
