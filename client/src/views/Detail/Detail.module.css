@@ -5,39 +5,58 @@
     border-radius: 5em;
     position: absolute;
     margin-top: 3em;
-    margin-left: 10em;
+    margin-left: 12em;
     height: 30em;
     width: 47em;
     border: solid rgb(8, 8, 43) 0.2em;
   }
   
-  .imag {
-    border-radius: 2em;
-    position: absolute;
-    left: 8em;
-    top: 6em;
+  .image {
+    height:11.5em;
+    width: 15.5em;
+    border-radius: 15%;
+    position: relative;
+    top: 2.3em;
+    left: 14.5em;
   }
   
   .name {
     position: absolute;
-    left: 8em;
-    top: 13em;
+    left: 16em;
+    top: 10em;
   }
   .capital {
     position: absolute;
-    left: 8em;
-    top: 15em;
+    left: 17em;
+    top: 12em;
   }
   
-  .poblacion {
+  .population {
     position: absolute;
     left: 4em;
-    bottom: 6.5em;
+    bottom: 5em;
   }
-  .continente {
+  .continent {
     position: absolute;
     left: 4em;
-    bottom: 4em;
+    bottom: 1em;
+  }
+
+  .area {
+    position: absolute;
+    left: 18em;
+    bottom: 3em;
+  }
+
+  .subregion {
+    position: absolute;
+    left: 4em;
+    bottom: 3em;
+  }
+  .id {
+    position: absolute;
+    left: 4em;
+    bottom: 7em;
   }
   
   .preg {

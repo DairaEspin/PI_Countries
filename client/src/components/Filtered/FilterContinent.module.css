@@ -40,7 +40,7 @@
     bottom: 7em;
     font-weight: bold;
     font-size: 1.5em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #ffffff 50%);
+    background-image: linear-gradient(to right, #ffffff, #ffffff 50%, #cceefa 30%);
     background-size: 200% 100%;
     background-position: -150%;
     display: inline-block;
@@ -78,7 +78,7 @@
     bottom: 7em;
     font-weight: bold;
     font-size: 1.5em;
-    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #ffffff 50%);
+    background-image: linear-gradient(to right, #ffffff, #ffffff 50%, #cceefa 50%);
     background-size: 200% 100%;
     background-position: -150%;
     padding: 5px 0;
