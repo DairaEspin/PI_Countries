@@ -56,7 +56,6 @@ export default function ActivityForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate(formData);
-
     // Verificar si hay errores de validación
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -69,7 +68,7 @@ export default function ActivityForm() {
       });
       return;
     }
-    try {
+    try {    console.log(formData);
       dispatch(createActivity(formData));
 
       setShowSuccessMessage(true); // Mostrar el mensaje de éxito
@@ -121,9 +120,10 @@ export default function ActivityForm() {
           <input
             className={style.difinput}
             type="text"
-            name="difficulty"
+            name="dificultad"
             placeholder="Del 1 al 5"
             value={formData.dificultad}
+
             onChange={handleInputChange}
             onBlur={handleBlur}
           />

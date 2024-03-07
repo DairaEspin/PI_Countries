@@ -2,11 +2,11 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
   sequelize.define('Activity', {
-     id: {
-     type: DataTypes.INTEGER,
-     primaryKey: true,
-     autoIncrement: true,
-     },
+    //  id: {
+    //  type: DataTypes.INTEGER,
+    //  primaryKey: true,
+    //  autoIncrement: true,
+    //  },
     name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
     type: DataTypes.INTEGER,
     validate: {
       min: 1,
-      max: 5
+      max: 5,
     },
     allowNull: false,
     },
@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
     type: DataTypes.FLOAT,
     validate: {
       min: 1, 
-      max: 2164
+      max: 24,
     },
     allowNull: false,
     },

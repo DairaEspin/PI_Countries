@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { orderPopulation } from "../../Redux/Actions";
+import { orderPopulation } from "../../redux/Actions";
 import style from "./FilterContinent.module.css";
 
 export default function OrderPopulation() {

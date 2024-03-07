@@ -1,6 +1,6 @@
 .countries {
-    display: grid;
-    grid-template-columns: repeat(5, 19em);
+    display:grid;
+    grid-template-columns: repeat(4, 18em);
     grid-row-gap: 4em;
     justify-items: center;
     align-items: center;

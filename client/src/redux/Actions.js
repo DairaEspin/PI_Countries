@@ -32,7 +32,7 @@ import {
   };
   
   export const createActivity = (activityData) => {
-    const endpoint = `http://localhost:3001/create`;
+    const endpoint = `http://localhost:3001/create${activityData}`;
   
     return  (dispatch) => {
       try {
@@ -46,8 +46,8 @@ import {
         console.error("Error al crear la actividad: ", error);
         
       }
-    }
-  } 
+    };
+  }; 
         
   
   export const getActivity = (activityFilter) => {

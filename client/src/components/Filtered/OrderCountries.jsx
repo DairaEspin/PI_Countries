@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { orderCountry } from "../../Redux/Actions";
+import { orderCountry } from "../../redux/Actions";
 import style from "./FilterContinent.module.css";
 
 export default function OrderCountries() {

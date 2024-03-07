@@ -49,16 +49,35 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         activity: action.payload,
       };
-    case FILTER_CONTINENT:
-      return {
-        ...state,
-        continentFilter: {
-          ...state.continentFilter,
-          continent: action.payload,
-        },
-      };
+      case FILTER_CONTINENT:
+  // Obtener el nombre del continente seleccionado del payload
+  const selectedContinent = action.payload;
+  
+  // Filtrar los países por el continente seleccionado
+  const filteredCountries = state.allCountry.filter(country => {
+    // Si no se ha seleccionado ningún continente, mostrar todos los países
+    if (selectedContinent === "") {
+      return true;
+    }
+    // Si el país pertenece al continente seleccionado, incluirlo en el filtro
+    return country.continent === selectedContinent;
+  });
+  return {
+    ...state,
+    allCountry: filteredCountries,
+    continentFilter: selectedContinent, // Actualiza el filtro por continente
+  };
+
+    // case FILTER_CONTINENT:
+    //   return {
+    //     ...state,
+    //     continentFilter: {
+    //       ...state.continentFilter,
+    //       orderFilter: action.payload,
+    //     },
+    //   };
     case ORDER_COUNTRY:
-      let orderCountries = [...state.allCountry]; // Hacer una copia de los países
+      let orderCountries = [...state.allCountry]; 
       state.allCountry.sort((a, b) => {
         if (action.payload === "A-Z") {
           if (a.name > b.name) {
@@ -84,34 +103,23 @@ export default function rootReducer(state = initialState, action) {
         orderFilter: action.payload,
       };
 
-    case ORDER_POPULATION:
-      let sortedCountries = [...state.allCountry]; // Hacer una copia de los países
-
-      state.allCountry.sort((a, b) => {
-        if (action.payload === "A-Z") {
-          if (a.name > b.name) {
-            return 1;
+      case ORDER_POPULATION:
+        let populationOrder = [...state.allCountry];
+      
+        populationOrder.sort((a, b) => {
+          if (action.payload === "Ascendent-Descendent") {
+            return a.population > b.population;
+          } else {
+            return b.population > a.population;
           }
-          if (b.name > a.name) {
-            return -1;
-          }
-          return 0;
-        } else {
-          if (a.name > b.name) {
-            return -1;
-          }
-          if (b.name > a.name) {
-            return 1;
-          }
-          return 0;
-        }
-      });
-
-      return {
-        ...state,
-        allCountry: sortedCountries,
-        populationOrder: action.payload, // Actualiza la opción de ordenamiento por población
-      };
+        });
+      
+        return {
+          ...state,
+          allCountry: populationOrder,
+          orderFilter: action.payload, // Actualiza la opción de ordenamiento por población
+        };
+      
 
     default:
       return state;
