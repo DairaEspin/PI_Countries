@@ -7,10 +7,10 @@ import style from "./Form.module.css";
 
 export default function ActivityForm() {
   const [formData, setFormData] = useState({
-    nombre: "",
-    dificultad: "",
-    duracionHoras: "",
-    temporada: "",
+    name: "",
+    difficulty: "",
+    duration: "",
+    season: "",
     pais: [],
   });
   const allCountry = useSelector((state) => state.allCountry);
@@ -75,10 +75,10 @@ export default function ActivityForm() {
 
       // Restablece el formulario
       setFormData({
-        nombre: "",
-        dificultad: "",
-        duracionHoras: "",
-        temporada: "",
+        name: "",
+        difficulty: "",
+        duration: "",
+        season: "",
         pais: [],
       });
       setErrors({});
@@ -104,14 +104,14 @@ export default function ActivityForm() {
           <input
             className={style.actinput}
             type="text"
-            name="nombre"
+            name="name"
             placeholder="Name of Activity"
-            value={formData.nombre}
+            value={formData.name}
             onChange={handleInputChange}
             onBlur={handleBlur}
           />
-          {errors.nombre && (
-            <span className={style.error}> {errors.nombre} </span>
+          {errors.name && (
+            <span className={style.error}> {errors.name} </span>
           )}
         </div>
 
@@ -120,15 +120,15 @@ export default function ActivityForm() {
           <input
             className={style.difinput}
             type="text"
-            name="dificultad"
+            name="difficulty"
             placeholder="Del 1 al 5"
-            value={formData.dificultad}
+            value={formData.difficulty}
 
             onChange={handleInputChange}
             onBlur={handleBlur}
           />
-          {errors.dificultad && (
-            <span className={style.error}> {errors.dificultad} </span>
+          {errors.difficulty && (
+            <span className={style.error}> {errors.difficulty} </span>
           )}
         </div>
         <div className={style.dur}>
@@ -136,14 +136,14 @@ export default function ActivityForm() {
           <input
             className={style.durinput}
             type="text"
-            name="duracionHoras"
+            name="duration"
             placeholder="Hours"
-            value={formData.duracionHoras}
+            value={formData.duration}
             onChange={handleInputChange}
             onBlur={handleBlur}
           />
-          {errors.duracionHoras && (
-            <span className={style.error}> {errors.duracionHoras} </span>
+          {errors.duration && (
+            <span className={style.error}> {errors.duration} </span>
           )}
         </div>
         <div className={style.temp}>
@@ -151,18 +151,18 @@ export default function ActivityForm() {
           <select
             className={style.tempsel}
             type="text"
-            name="temporada"
-            value={formData.temporada}
+            name="season"
+            value={formData.season}
             onChange={handleInputChange}
             onBlur={handleBlur}
           >
-            <option value="Verano">Summer</option>
-            <option value="Otoño">Autumn</option>
-            <option value="Invierno">Winter</option>
-            <option value="Primavera">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
           </select>
-          {errors.temporada && (
-            <span className={style.error}> {errors.temporada} </span>
+          {errors.season && (
+            <span className={style.error}> {errors.season} </span>
           )}
         </div>
         <div>
@@ -208,10 +208,13 @@ export default function ActivityForm() {
             })}
           </ul>
         </div>
-    
-        <button className={style.boton} type="submit">
+
+         <div >
+        <button  className={style.boton} type="submit">
           CREATE ACTIVITY
         </button>
+        </div>
+
         {showSuccessMessage && (
           <div className={style.successMessage}>
             CREATED SUCCESSFULLY
@@ -234,4 +237,4 @@ export default function ActivityForm() {
       </div>
     </div>
   );
-}
+};

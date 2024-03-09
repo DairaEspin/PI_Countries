@@ -105,12 +105,23 @@ export default function rootReducer(state = initialState, action) {
 
       case ORDER_POPULATION:
         let populationOrder = [...state.allCountry];
-      
         populationOrder.sort((a, b) => {
           if (action.payload === "Ascendent-Descendent") {
-            return a.population > b.population;
+            if (a.population > b.population) {
+              return 1;
+            }
+            if (b.population > a.population) {
+              return -1;
+            }
+            return 0;
           } else {
-            return b.population > a.population;
+            if (a.population > b.population) {
+              return -1;
+            }
+            if (b.population > a.population) {
+              return 1;
+            }
+            return 0;
           }
         });
       

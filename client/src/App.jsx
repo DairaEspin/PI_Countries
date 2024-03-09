@@ -7,7 +7,7 @@ import Landing from './views/Landing/Landing';
 import Home from './views/Home/Home';
 import Form from './views/Form/Form';
 import Detail from './views/Detail/Detail';
-import Activities from './components/Activity/Activity'
+import Activity from './components/Activity/Activity'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/create" element={<Form />} />
-            <Route path="/activities" element={<Activities />} />
+            <Route path="/activities" element={<Activity />} />
           </Routes>
         </Router>
       </div>
