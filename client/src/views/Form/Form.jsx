@@ -34,10 +34,11 @@ export default function ActivityForm() {
   // Función para manejar cambios en la selección de países
   const handleCountrySelection = (e) => {
     const selectedCountryName = e.target.value;
+    
     if (!formData.pais.includes(selectedCountryName)) {
       setFormData({
         ...formData,
-        pais: [...formData.pais, selectedCountryName],
+      pais: [...formData.pais, selectedCountryName],
       });
     }
   };
@@ -72,7 +73,6 @@ export default function ActivityForm() {
       dispatch(createActivity(formData));
 
       setShowSuccessMessage(true); // Mostrar el mensaje de éxito
-
       // Restablece el formulario
       setFormData({
         name: "",
@@ -180,7 +180,7 @@ export default function ActivityForm() {
                 .slice() // Copia el array para no modificar el original
                 .sort((a, b) => a.name.localeCompare(b.name)) // Ordena alfabéticamente
                 .map((country) => (
-                  <option key={country.name} value={country.name}>
+                  <option name={country.id} key={country.name} value={country.name}>
                     {country.name}
                   </option>
                 ))}

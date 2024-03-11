@@ -32,30 +32,35 @@ import {
   };
   
   export const createActivity = (activityData) => {
-    const endpoint = `http://localhost:3001/create${activityData}`;
+    const endpoint = `http://localhost:3001/create`;
+
+    let aux = activityData
+    aux.difficulty = Number(aux.difficulty)
+    aux.duration = Number(aux.duration)
   
-    return  (dispatch) => {
-      try {
-        const { data } = axios.post(endpoint, activityData)
-        .then((response) =>
-        dispatch({
-          type: CREATE_ACTIVITY,
-          payload: data,
-        }))
-      } catch (error) {
-        console.error("Error al crear la actividad: ", error);
-        
-      }
+    return (dispatch) => {
+      axios
+        .post(endpoint, aux)
+        .then(({ data }) => {
+          console.log(data);
+          return dispatch({
+            type: CREATE_ACTIVITY,
+            payload: data,
+          });
+        })
+        .catch((error) => {
+          console.error("Error creating:", error);
+        });
     };
-  }; 
-        
-  
-  export const getActivity = (activityFilter) => {
-    const endpoint = `http://localhost:3001/activities${activityFilter}`;
+  }
+
+      
+  export const getActivity = (name) => {
+    const endpoint = `http://localhost:3001/activities`;
   
     return async (dispatch) => {
       try {
-        const { data } = await axios(endpoint);
+        const { data } = await axios(endpoint, name);
         return dispatch({
           type: GET_ACTIVITY,
           payload: data,

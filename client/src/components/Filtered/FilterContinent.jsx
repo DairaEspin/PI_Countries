@@ -14,8 +14,6 @@ export default function FilterContinent() {
     setCurrentPage(1);
   };
 
-
-  
   // Restablece el filtro
   const handleResetFilter = () => {
     dispatch(filterContinent(""));

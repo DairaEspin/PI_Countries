@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import FilterActivity from "../Filtered/FilterActivity";
 import style from "./Activity.module.css";
 
+
 export default function Activity() {
   const dispatch = useDispatch();
   const activity = useSelector((state) => state.activity);
@@ -18,6 +19,7 @@ export default function Activity() {
     setNoResults(false); // Restablece el estado noResults cuando se cambia el filtro
     dispatch(getActivity(activityFilter))
       .then((response) => {
+        console.log(response)
         if (!response || response.length === 0) {
           setNoResults(true);
         }

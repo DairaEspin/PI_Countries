@@ -1,8 +1,32 @@
 const { Activity, Country } = require("../../db");
+const {getAllCountry} = require("../Country/getAllCountry")
 
 const createActivity = async (req, res) => {
   const { name, difficulty, duration, season, pais } = req.body;
   try {
+    const allCountries = await Country.findAll()
+    console.log(allCountries)
+    let countryID = []
+    
+    allCountries.forEach((country)=>{
+
+      // if(pais.includes(country.name)){
+      //   countryID.push(country.id)
+      // }
+
+      pais.forEach((nombre)=>{
+        if(nombre === country.name){
+          console.log(country.id)
+        countryID.push(country.id)
+      }
+
+      })
+    
+    } )
+
+    console.log(countryID)
+
+    
     // Buscar la actividad existente por su nombre
     const existingActivity = await Activity.findOne({
       where: { name: name },
@@ -10,6 +34,7 @@ const createActivity = async (req, res) => {
 
     if (existingActivity) {
       // Si la actividad ya existe, enviar un mensaje indicando que ya existe
+
       res.status(200).json("already exist");
     } else {
       // Si la actividad no existe, crearla
@@ -21,7 +46,9 @@ const createActivity = async (req, res) => {
       });
 
       // Asociar la actividad con el país seleccionado (convertido a mayúsculas)
-      await newActivity.addCountry(pais.toUpperCase());
+      await newActivity.addCountry(countryID);
+    
+
 
       // Enviar un mensaje indicando que se creó la actividad con éxito
       res.status(201).json("successfully");

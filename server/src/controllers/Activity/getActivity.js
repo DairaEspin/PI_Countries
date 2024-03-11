@@ -1,18 +1,26 @@
-const { Activity } = require("../../db");
+const { Activity, Country } = require("../../db");
 const { Op } = require("sequelize");
 
 const getActivity = async (req, res) => {
   try {
-    const { activityFilter } = req.query;
+    const { name } = req.query;
     let activity;
-    if (activityFilter) {
+    if (name) {
       activity = await Activity.findAll({
         where: {
-          nombre: {
-            [Op.iLike]: `%${activityFilter}%`,
+          name: {
+            [Op.iLike]: `%${name}%`,
           },
         },
+        include:{
+          model: Country,
+          attributes: ["name", "id"],
+          through: {
+            attributes: [],
+          },
+         },
       });
+      activity.addCountry()
     } else {
       activity = await Activity.findAll();
     }
