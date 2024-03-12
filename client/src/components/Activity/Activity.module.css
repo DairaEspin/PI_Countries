@@ -1,21 +1,22 @@
 .contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: em;
+    grid-column-gap: 2em;
     grid-row-gap: 2em;
     padding-left: 4em;
     padding-top: 2em;
   }
   
   .actividad {
-    background-image: url("../../assets/home.jpg");
+    background-image: url("../../assets/aeroplane_1.gif");
     background-repeat: no-repeat;
     background-size: contain;
     display: flexbox;
     align-items: center;
-    height: 40em;
-    width: 40em;
-    opacity: 75%;
+    height: 16,5em;
+    width: 26em;
+    opacity: 100%;
+    border-radius: 30px;
   }
   
   .tipo {
@@ -23,6 +24,7 @@
     position: relative;
     left: 1em;
     font-weight: bold;
+    color: black;
   }
   
   .link {
@@ -44,7 +46,7 @@
     left: 40em;
   }
   .link {
-    background-image: linear-gradient(to right, #9250b0, #ffffff 50%, #379bd1 50%);
+    background-image: linear-gradient(to right, #f578c1, #ffffff 50%, #379bd1 50%);
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
@@ -60,7 +62,7 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: -3px;
+    bottom: 10px;
     left: 0;
     width: 0;
     height: 3px;

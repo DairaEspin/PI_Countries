@@ -8,8 +8,8 @@ import style from "./Activity.module.css";
 
 export default function Activity() {
   const dispatch = useDispatch();
-  const activity = useSelector((state) => state.activity);
-  console.log("estado", activity);
+  const activities = useSelector((state) => state.activities);
+  console.log("estado", activities);
   const [activityFilter, setActivityFilter] = useState(""); // Estado local para almacenar el filtro
   const [error, setError] = useState(null);
   const [noResults, setNoResults] = useState(false);
@@ -19,8 +19,8 @@ export default function Activity() {
     setNoResults(false); // Restablece el estado noResults cuando se cambia el filtro
     dispatch(getActivity(activityFilter))
       .then((response) => {
-        console.log(response)
-        if (!response || response.length === 0) {
+        console.log(response.payload)
+        if (!response.payload || response.payload.length === 0) {
           setNoResults(true);
         }
       })
@@ -55,15 +55,16 @@ export default function Activity() {
         </div>
       ) : error ? (
         <p>{error}</p>
-      ) : (activity.map((activity, index) => (
-          <div key={index} className={style.activity}>
+      ) : (
+        activities.map((activity, index) => (
+          <div key={index} className={style.actividad}>
             <p className={style.tipo}>Type of Activity: {activity.name}</p>
             <p className={style.tipo}>Difficulty: {activity.difficulty}</p>
             <p className={style.tipo}>
               Hours (Time): {activity.duration}
             </p>
             <p className={style.tipo}>Season: {activity.season}</p>
-            <p className={style.tipo}>Country: {activity.pais.join(", ")}</p>
+          <p className={style.tipo}>Country: {activity.pais}</p>
           </div>
         ))
       )}

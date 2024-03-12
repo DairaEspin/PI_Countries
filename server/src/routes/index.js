@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/countries', getAllCountries);
 router.post('/create', createActivity);
-router.get('/activities', getActivity);
+router.get('/activity', getActivity);
 router.get('/name', byNameCountry);
 router.get('/:id', byIdCountry);
 

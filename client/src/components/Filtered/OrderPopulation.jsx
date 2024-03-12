@@ -23,8 +23,8 @@ export default function OrderPopulation() {
         value={populationOrder || ""}
         onChange={handlePopulationOrderChange}
       >
-        <option value="Ascendent">Ascendent</option>
-        <option value="Descendent">Descendent</option>
+        <option value="Ascendent-Descendent">Ascendent</option>
+        <option value="Descendent-Ascendent">Descendent</option>
       </select>
       <button className={style.boton} onClick={handleResetFilter}>
         Clean

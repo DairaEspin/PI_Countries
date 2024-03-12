@@ -127,7 +127,7 @@ export default function rootReducer(state = initialState, action) {
         return {
           ...state,
           allCountry: populationOrder,
-          orderFilter: action.payload, // Actualiza la opción de ordenamiento por población
+          populationOrder: action.payload, // Actualiza la opción de ordenamiento por población
         };
       
 

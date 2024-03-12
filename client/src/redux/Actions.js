@@ -55,12 +55,12 @@ import {
   }
 
       
-  export const getActivity = (name) => {
-    const endpoint = `http://localhost:3001/activities`;
+  export const getActivity = (activityFilter) => {
+    const endpoint = `http://localhost:3001/activity?activityFilter=${activityFilter}`;
   
     return async (dispatch) => {
       try {
-        const { data } = await axios(endpoint, name);
+        const { data } = await axios(endpoint);
         return dispatch({
           type: GET_ACTIVITY,
           payload: data,
@@ -83,7 +83,7 @@ import {
         });
       } catch (error) {
         console.error("Error al obtener el país por ID: ", error);
-        throw error; // Propaga el error para manejarlo en el componente Detail
+        throw error; 
       }
     };
   };
