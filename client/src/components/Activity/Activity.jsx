@@ -64,7 +64,7 @@ export default function Activity() {
               Hours (Time): {activity.duration}
             </p>
             <p className={style.tipo}>Season: {activity.season}</p>
-          <p className={style.tipo}>Country: {activity.pais}</p>
+          <p className={style.tipo}>Id Activity: {activity.id}</p>
           </div>
         ))
       )}

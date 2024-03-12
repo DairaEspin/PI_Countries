@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterContinent } from  "../../redux/Actions"
 import style from "./FilterContinent.module.css";
 import { useState } from "react";
+import { getAllCountry} from "../../redux/Actions";
+
 
 export default function FilterContinent() {
   const dispatch = useDispatch();
@@ -10,9 +12,12 @@ export default function FilterContinent() {
 
   const handleContinentChange = (event) => {
     const newContinent = event.target.value
-    dispatch(filterContinent(newContinent));
+    dispatch(getAllCountry()).then(()=>{
+      dispatch(filterContinent(newContinent));
+    });
     setCurrentPage(1);
   };
+    
 
   // Restablece el filtro
   const handleResetFilter = () => {

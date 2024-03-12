@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { orderPopulation } from "../../redux/Actions";
+import { getAllCountry, orderPopulation } from "../../redux/Actions";
 import style from "./FilterContinent.module.css";
 
 export default function OrderPopulation() {
@@ -12,7 +12,9 @@ export default function OrderPopulation() {
 
   // Restablece el filtro
   const handleResetFilter = () => {
-    dispatch(orderPopulation(""));
+    dispatch(getAllCountry()).then(()=>{
+      dispatch(orderPopulation(""));
+    })
   };
 
   return (

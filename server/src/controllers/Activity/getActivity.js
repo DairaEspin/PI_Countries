@@ -36,7 +36,7 @@ const getActivity = async (req, res) => {
       difficulty: act.difficulty,
       duration: act.duration,
       season: act.season,
-      pais: act.pais,
+      id: act.id,
     }));
     res.json(activityData);
   } catch (error) {

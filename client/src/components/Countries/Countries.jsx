@@ -35,7 +35,7 @@ export default function Countries({ searchTerm, setSearchTerm }) {
       setShowNoResults(false);
       dispatch(getAllCountry());
     }
-  }, [dispatch, searchTerm, continentFilter, orderFilter, populationOrder]);
+  }, [dispatch, searchTerm, orderFilter]);
 
   // Filtra los países en función del término de búsqueda y el continente seleccionado
   filteredCountries = allCountry.filter((country) => {
@@ -59,12 +59,6 @@ export default function Countries({ searchTerm, setSearchTerm }) {
     filteredCountries.sort((a, z) => z.name.localeCompare(a.name));
   }
 
-  // Filtro por población
-  if (populationOrder === "Ascendente") {
-    filteredCountries.sort((a, z) => z.población - a.población);
-  } else if (populationOrder === "Descendente") {
-    filteredCountries.sort((a, z) => a.población - z.población);
-  }
 
   // Calcula el índice de inicio en función de la página actual
   const startIndex = (currentPage - 1) * perPage;
